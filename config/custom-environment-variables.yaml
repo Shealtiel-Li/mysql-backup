@@ -1,0 +1,7 @@
+mysql:
+  user: MYSQL_USER
+  password: MYSQL_PASSWORD
+  containerName: MYSQL_CONTAINER_NAME
+  dir: MYSQL_DIR
+  dumpDir: /usr/bin/mysqldump
+  database: MYSQL_DATABASE
