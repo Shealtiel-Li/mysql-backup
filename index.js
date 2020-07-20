@@ -47,9 +47,8 @@ function fullyBak() {
 function dailyBak() {
     return executeShell('core/mysql-daily.sh', [getFolder('day')]);
 }
-
 fullyBak().then(dailyBak);
 
-schedule.scheduleJob('0 45 23  *  *  0', fullyBak)
+schedule.scheduleJob(process.env.RESET_MASTRE ? '0 20 23  *  *  0' : '0 40 23  *  *  0', fullyBak)
 
-schedule.scheduleJob('0 30 23  *  *  *', dailyBak)
+schedule.scheduleJob(process.env.RESET_MASTRE ? '0 30 23  *  *  *' : '0 50 23  *  *  *', dailyBak)

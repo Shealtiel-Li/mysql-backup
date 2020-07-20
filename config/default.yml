@@ -2,7 +2,7 @@ mysql:
   user: root
   password: Lxl&Mysql
   containerName: shealtiel-mysql
-  dir: /Users/shealtiel/CodeBase/file-storage/docker/mysql/data
+  dir: /Users/shealtiel/CodeBase/Personal/file-storage/docker/mysql/data
   dumpDir: /usr/bin/mysqldump
   adminDir: /usr/bin/mysqladmin
   database: -A

@@ -31,3 +31,9 @@ do
      fi
 done
 
+# 重置增量备份日志
+if [ $RESET_MASTRE ]; then
+  docker exec  $CONTAINER_NAME mysql -u$USER -p"$PASSWORD" -e "reset master;"
+fi
+
+
